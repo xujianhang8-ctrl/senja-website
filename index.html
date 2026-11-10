@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Pre-launch buyer's guide for Solano Grand EC at Senja Close, Bukit Panjang. Presented by Andy Ea.">
+<title>Solano Grand Buyer's Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Manrope:wght@400;500;600&display=swap">
+<style>
+/* Layout: quiet gallery. One 1080px column; each section is a small label on the left and content on the right. Whitespace does the separating, one bronze accent taken from the sunset in the render. */
+:root{
+  --bg:#fafaf8; --fg:#1c1d21; --muted:#6c6e75; --faint:#9a9ca2; --line:#e6e4df; --soft:#f1efea;
+  --accent:#9c6435; --bar:#d9d6cf; --park:#a9bda9; --plan:#ffffff;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111214; --fg:#ecebe7; --muted:#9c9da3; --faint:#74767c; --line:#2a2b2f; --soft:#1a1b1e;
+  --accent:#d9a273; --bar:#3a3b40; --park:#4f6b55; --plan:#f4f3f0; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111214; --fg:#ecebe7; --muted:#9c9da3; --faint:#74767c; --line:#2a2b2f; --soft:#1a1b1e;
+  --accent:#d9a273; --bar:#3a3b40; --park:#4f6b55; --plan:#f4f3f0; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+.num{font-variant-numeric:tabular-nums}
+
+.page{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin-inline:auto}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:60px}
+.brand{font-family:var(--serif);font-size:1.3rem;text-decoration:none;letter-spacing:.01em;white-space:nowrap}
+.navlinks{display:flex;gap:22px;flex:1;justify-content:center}
+.navlinks a{font-size:.82rem;color:var(--muted);text-decoration:none}
+.navlinks a:hover{color:var(--fg)}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--fg);color:var(--bg);text-decoration:none;font-size:.85rem;font-weight:500;padding:10px 18px;border-radius:999px;white-space:nowrap;border:0;cursor:pointer;font-family:var(--sans)}
+.cta:hover{opacity:.88}
+.textlink{font-size:.92rem;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.textlink:hover{border-color:var(--fg)}
+@media (max-width:860px){.navlinks{display:none}.nav .wrap{justify-content:space-between}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center;padding-block:clamp(32px,6vw,72px) clamp(56px,8vw,104px)}
+.kicker{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.hero h1{font-family:var(--serif);font-size:clamp(3.6rem,8.5vw,6.6rem);line-height:.92;letter-spacing:-.01em;margin:22px 0 22px}
+.hero .former{font-size:.9rem;color:var(--muted)}
+.hero .lede{font-size:1.12rem;max-width:36ch;margin-top:28px}
+.hero .actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:36px}
+.hero .by{margin-top:48px;font-size:.85rem;color:var(--muted)}
+.hero .by b{color:var(--fg);font-weight:500}
+.hero figure{margin:0}
+.hero figure img{display:block;width:100%;height:auto;aspect-ratio:1122/1402;object-fit:cover;border-radius:2px}
+.hero figcaption{font-size:.75rem;color:var(--faint);margin-top:10px}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero .lede{max-width:none}}
+
+/* sections */
+.sec{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px 48px;padding-block:clamp(56px,8vw,96px)}
+.sec + .sec{border-top:1px solid var(--line)}
+.label{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-top:12px}
+.body{min-width:0;display:grid;gap:36px;align-content:start}
+h2{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);line-height:1.08;letter-spacing:-.005em;max-width:22ch}
+h3{font-size:1rem;font-weight:600;line-height:1.35}
+.lead{font-size:1.06rem;max-width:62ch}
+.lead b{font-weight:600}
+.src{font-size:.76rem;color:var(--faint);max-width:80ch}
+.accent{color:var(--accent)}
+@media (max-width:820px){.sec{grid-template-columns:1fr;gap:16px}.label{padding-top:0}}
+
+/* figures */
+.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px}
+.fig .n{font-family:var(--serif);font-size:clamp(2.4rem,4.4vw,3.2rem);line-height:1}
+.fig p{font-size:.92rem;color:var(--muted);margin-top:10px;max-width:26ch}
+@media (max-width:620px){.figs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* columns of text */
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.cols > div{display:grid;gap:8px;align-content:start}
+.cols p{color:var(--muted);font-size:.95rem}
+.cols p.k{color:var(--fg)}
+@media (max-width:760px){.cols{grid-template-columns:1fr;gap:24px}}
+
+/* tables */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.95rem}
+th,td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--muted);padding-top:0}
+td.r,th.r{text-align:right}
+td.m{color:var(--muted)}
+tr.total td{border-bottom:0;font-weight:600}
+
+/* bars */
+.bars{display:grid;gap:14px}
+.bar{display:grid;grid-template-columns:170px minmax(0,1fr) 70px;gap:16px;align-items:center;font-size:.9rem}
+.bar .nm{line-height:1.3}
+.bar .nm span{display:block;font-size:.78rem;color:var(--faint)}
+.bar .t{height:6px;background:transparent;position:relative}
+.bar .t i{position:absolute;inset:0 auto 0 0;background:var(--bar);border-radius:3px}
+.bar .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.bar.rv .t i{background:var(--fg)} .bar.rv .v{color:var(--fg)}
+.bar.sg .t i{background:var(--accent)} .bar.sg .v,.bar.sg .nm{color:var(--accent);font-weight:600}
+.bar.nr .t i{background:transparent;border:1px dashed var(--bar)}
+@media (max-width:560px){.bar{grid-template-columns:110px minmax(0,1fr) 58px;gap:10px}}
+
+/* map */
+.loc{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:start}
+.map{overflow-x:auto;background:var(--soft);border-radius:2px}
+.map svg{display:block;width:100%;min-width:540px;height:auto}
+.map text{font-family:var(--sans);fill:var(--fg)}
+.map .mut{fill:var(--muted)}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.list li:first-child{border-top:1px solid var(--line)}
+.list li span:last-child{color:var(--muted);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.facts li{display:grid;gap:2px;justify-content:stretch}
+.facts li b{font-weight:600}
+.facts li span{white-space:normal!important;text-align:left!important}
+@media (max-width:860px){.loc{grid-template-columns:1fr}}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.two h3{margin-bottom:12px}
+@media (max-width:700px){.two{grid-template-columns:1fr}}
+
+/* statement */
+.statement{font-family:var(--serif);font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.2;max-width:28ch}
+
+/* estimator */
+.slider{display:grid;gap:14px}
+.slider-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.slider label{font-size:.9rem;color:var(--muted)}
+.psf{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--accent)}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.presets{display:flex;gap:8px 18px;flex-wrap:wrap}
+.preset{background:none;border:0;padding:4px 0;font:inherit;font-size:.84rem;color:var(--muted);cursor:pointer;border-bottom:1px solid transparent}
+.preset[aria-pressed="true"]{color:var(--fg);border-bottom-color:var(--fg)}
+.rows{display:grid}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr) 120px;gap:20px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.row:first-child{border-top:1px solid var(--line)}
+.row .nm{font-size:.95rem;line-height:1.3}
+.row .nm span{display:block;font-size:.78rem;color:var(--faint)}
+.trk{position:relative;height:20px}
+.trk .rg{position:absolute;top:8px;height:4px;border-radius:2px;background:var(--bar)}
+.trk .rv{position:absolute;top:2px;width:1.5px;height:16px;background:var(--fg);transform:translateX(-50%)}
+.trk .dot{position:absolute;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);transform:translateX(-50%);transition:left .25s ease}
+.row .val{text-align:right;font-variant-numeric:tabular-nums}
+.row .val b{display:block;font-weight:600;font-size:1.05rem}
+.row .val span{font-size:.76rem;color:var(--faint)}
+.axis{display:grid;grid-template-columns:150px minmax(0,1fr) 120px;gap:20px;font-size:.74rem;color:var(--faint);padding-top:8px}
+.axis div{position:relative;height:16px}
+.axis span{position:absolute;transform:translateX(-50%)}
+.key{display:flex;gap:8px 24px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+.key i{display:inline-block;vertical-align:middle;margin-right:8px}
+.k-rg{width:24px;height:4px;border-radius:2px;background:var(--bar)}
+.k-dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.k-rv{width:1.5px;height:14px;background:var(--fg)}
+@media (max-width:620px){
+  .row{grid-template-columns:1fr auto;row-gap:10px}
+  .trk{grid-column:1/-1;grid-row:2}
+  .axis{grid-template-columns:1fr}.axis>div:first-child,.axis>div:last-child{display:none}
+}
+
+/* layouts */
+.tabs{display:flex;gap:8px 26px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.tab{background:none;border:0;font:inherit;font-size:.92rem;color:var(--muted);padding:0 0 12px;cursor:pointer;border-bottom:1.5px solid transparent;margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--fg)}
+.plan{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:center}
+.plan figure{margin:0;background:var(--plan);padding:16px;border-radius:2px}
+.plan img{display:block;width:100%;height:auto}
+.plan .meta{display:grid;gap:14px;align-content:start}
+.plan .suits{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.plan h3{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.1}
+.plan .sz{color:var(--muted);font-size:.92rem}
+.plan ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:.95rem}
+.plan .px{font-size:.95rem;border-top:1px solid var(--line);padding-top:14px}
+.plan .px b{font-weight:600}
+@media (max-width:820px){.plan{grid-template-columns:1fr}}
+
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.tl > div{position:relative;padding:28px 16px 0 0;border-top:1px solid var(--line);display:grid;gap:4px;align-content:start}
+.tl > div::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--bar)}
+.tl .now::before{background:var(--accent);width:9px;height:9px;top:-5px}
+.tl .when{font-family:var(--serif);font-size:1.5rem;line-height:1.1}
+.tl .now .when{color:var(--accent)}
+.tl .past .when{color:var(--faint)}
+.tl b{font-weight:600;font-size:.92rem}
+.tl span{font-size:.85rem;color:var(--muted)}
+@media (max-width:820px){.tl{grid-template-columns:1fr;gap:0}.tl > div{border-top:0;border-left:1px solid var(--line);padding:0 0 24px 22px}.tl > div::before{top:8px;left:-4px}.tl .now::before{left:-5px}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;counter-reset:s}
+.steps > div{display:grid;gap:6px;align-content:start}
+.steps .i{font-family:var(--serif);font-size:1.6rem;color:var(--accent);line-height:1}
+.steps p{font-size:.92rem;color:var(--muted)}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.agent{background:var(--soft);border-radius:2px;display:flex;justify-content:center;align-items:flex-end;padding-top:24px;overflow:hidden;aspect-ratio:3/4;max-width:100%}
+.agent img{height:96%;width:auto;max-width:100%;object-fit:contain;display:block}
+.contact h2{font-size:clamp(2.4rem,5vw,3.4rem)}
+.contact .who{display:grid;gap:18px;align-content:start}
+.contact .list a{text-decoration:none}
+.contact .list a:hover{text-decoration:underline}
+.copy{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;font:inherit;font-size:.72rem;padding:2px 10px;margin-left:10px;cursor:pointer}
+form{display:grid;gap:16px;align-content:start}
+.field{display:grid;gap:6px}
+.field label{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+.field input,.field select{font:inherit;font-size:.95rem;padding:10px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--fg);width:100%;border-radius:0}
+.field input:focus,.field select:focus{border-bottom-color:var(--fg);outline:none}
+.field select option{background:var(--bg);color:var(--fg)}
+.hint{font-size:.78rem;color:var(--faint)}
+@media (max-width:960px){.contact{grid-template-columns:180px minmax(0,1fr)}.contact form{grid-column:1/-1}}
+@media (max-width:560px){.contact{grid-template-columns:1fr}.agent{max-width:240px}}
+
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-block:28px;font-size:.78rem;color:var(--faint)}
+</style>
+<style>
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<div class="nav page">
+  <nav class="wrap" aria-label="Sections">
+    <a class="brand" href="#top">Solano Grand</a>
+    <div class="navlinks">
+      <a href="#rules">Old rules</a>
+      <a href="#location">Location</a>
+      <a href="#prices">Prices</a>
+      <a href="#estimate">Estimator</a>
+      <a href="#layouts">Layouts</a>
+      <a href="#timeline">Timeline</a>
+    </div>
+    <a class="cta" href="#contact">Register interest</a>
+  </nav>
+</div>
+
+<main class="page" id="top">
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Private buyer's guide · Pre-launch</p>
+        <h1>Solano<br>Grand</h1>
+        <p class="former">Formerly Senja Close EC · District 23 · Bukit Panjang</p>
+        <p class="lede">About 300 homes by CDL at Senja Close. One of the last ECs on the 5-year MOP.</p>
+        <div class="actions">
+          <a class="cta" href="https://wa.me/6597317111?text=Hi%20Andy%2C%20I%27d%20like%20to%20register%20interest%20for%20Solano%20Grand." target="_blank" rel="noopener">WhatsApp Andy</a>
+          <a class="textlink" href="#estimate">See price estimates</a>
+        </div>
+        <p class="by">Presented by <b>Andy Ea</b> · <span class="num">9731 7111</span></p>
+      </div>
+      <figure>
+        <img src="images/hero.webp" alt="Artist's impression of two residential towers above a landscaped pool deck at sunset, with the LRT and a river in the background">
+        <figcaption>Artist's impression only. Details subject to change.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="sec" id="glance">
+      <p class="label">At a glance</p>
+      <div class="body">
+        <h2>Bukit Panjang's first new EC in over a decade</h2>
+        <div class="figs">
+          <div class="fig"><div class="n">~300</div><p>homes, a boutique EC by today's standards</p></div>
+          <div class="fig"><div class="n">S$771</div><p>psf ppr land rate, in line with Rivelle (S$768)</p></div>
+          <div class="fig"><div class="n">5 yrs</div><p>MOP, under the old EC rules</p></div>
+          <div class="fig"><div class="n">~360 m</div><p>to Jelapang LRT</p></div>
+          <div class="fig"><div class="n">2 stops</div><p>by LRT to Bukit Panjang MRT, Downtown Line</p></div>
+          <div class="fig"><div class="n">99 yrs</div><p>leasehold, 109,353 sq ft site</p></div>
+        </div>
+        <p class="src">Sources: HDB tender results, EdgeProp, ERA. Unit count is an estimate (HDB ~295; reports ~302).</p>
+      </div>
+    </section>
+
+    <section class="sec" id="rules">
+      <p class="label">The timing</p>
+      <div class="body">
+        <h2>One of the last ECs on the old rules</h2>
+        <div class="tscroll">
+          <table>
+            <thead><tr><th>Rule</th><th class="accent">Solano Grand</th><th>ECs tendered from 8 May 2026</th></tr></thead>
+            <tbody>
+              <tr><td>Minimum occupation period</td><td class="accent">5 years</td><td class="m">10 years</td></tr>
+              <tr><td>Fully privatised (open to foreigners)</td><td class="accent">after 10 years</td><td class="m">after 15 years</td></tr>
+              <tr><td>Deferred Payment Scheme</td><td class="accent">can be offered</td><td class="m">removed</td></tr>
+              <tr><td>Second-timer share at launch</td><td class="accent">up to 30% (~90 homes)</td><td class="m">10%, second ballot after 2 years</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="lead">The only one of the five old-rules ECs in the West. Earlier exit, earlier upside, and room for upgraders to keep their HDB flat while it is built.</p>
+        <p class="src">MND announcement, 8 May 2026. DPS is at the developer's option; confirm at launch.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="developer">
+      <p class="label">The developer</p>
+      <div class="body">
+        <h2>A single, tier-1 developer</h2>
+        <div class="cols">
+          <div><h3>City Developments Limited</h3><p>100% owned through CDL Constellation, so design, pricing and timeline sit with one decision-maker.</p><p class="k">One of Singapore's largest listed developers.</p></div>
+          <div><h3>An EC track record</h3><p>Lumina Grand (Bukit Batok, 512 homes) and Piermont Grand (Punggol).</p><p class="k">Efficient family layouts, full facilities.</p></div>
+          <div><h3>Back in Bukit Panjang</h3><p>CDL built Blossom Residences at Segar Road, on land bought in 2010 at S$271 psf ppr.</p><p class="k">The last EC built in the town.</p></div>
+        </div>
+        <p class="src">Source: HDB tender results, CDL, EdgeProp.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="land">
+      <p class="label">Land cost</p>
+      <div class="body">
+        <h2>Land paid in line with Rivelle</h2>
+        <div class="bars" id="bars" role="list" aria-label="Land cost, S$ psf ppr"></div>
+        <p class="src">S$ psf ppr. Bars start at zero. Source: HDB tender results as reported by EdgeProp, ERA and PropNex; "~" figures rounded. Canberra Drive was tendered under the new rules.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="location">
+      <p class="label">Location</p>
+      <div class="body">
+        <h2>LRT at the door, Downtown Line in two stops</h2>
+        <div class="loc">
+          <div class="map">
+            <svg viewBox="0 0 735 437" role="img" aria-label="Schematic map of the Bukit Panjang LRT loop showing Solano Grand at Senja Close, about 360 m from Jelapang LRT">
+              <path d="M0 425 L735 425" stroke="var(--bar)" stroke-width="6" fill="none"/>
+              <text x="12" y="413" font-size="12" class="mut">KJE</text>
+              <path d="M708 0 L708 437" stroke="var(--bar)" stroke-width="6" fill="none"/>
+              <path d="M668 0 C 660 120, 640 200, 650 260 S 660 400, 675 437" stroke="var(--park)" stroke-width="3" stroke-dasharray="10 8" fill="none"/>
+              <text x="600" y="58" font-size="13" text-anchor="middle" class="mut">Rail Corridor</text>
+              <circle cx="568" cy="118" r="20" fill="var(--park)"/>
+              <text x="568" y="160" font-size="13" text-anchor="middle" class="mut">Zhenghua Park</text>
+              <circle cx="305" cy="183" r="15" fill="var(--park)"/>
+              <text x="305" y="220" font-size="13" text-anchor="middle" class="mut">Pang Sua Pond</text>
+              <path d="M416 276 L500 358 L735 358" stroke="var(--fg)" stroke-width="5" fill="none" stroke-linejoin="round"/>
+              <polygon points="305,75 416,110 450,194 416,276 305,305 200,270 166,187 207,103" fill="none" stroke="var(--faint)" stroke-width="4" stroke-linejoin="round"/>
+              <g fill="var(--bg)" stroke="var(--fg)" stroke-width="2">
+                <circle cx="305" cy="75" r="6"/><circle cx="416" cy="110" r="6"/><circle cx="450" cy="194" r="6"/>
+                <circle cx="305" cy="305" r="6"/><circle cx="200" cy="270" r="6"/><circle cx="166" cy="187" r="6"/><circle cx="207" cy="103" r="6"/>
+                <circle cx="416" cy="276" r="9"/>
+              </g>
+              <g font-size="13">
+                <text x="305" y="58" text-anchor="middle">Bangkit</text>
+                <text x="430" y="114">Pending</text>
+                <text x="464" y="199">Petir</text>
+                <text x="318" y="296">Senja</text>
+                <text x="152" y="192" text-anchor="end">Segar</text>
+                <text x="195" y="108" text-anchor="end">Fajar</text>
+                <text x="432" y="273" font-weight="600">Bukit Panjang</text>
+                <text x="432" y="291" font-size="12" class="mut">MRT · DT1</text>
+                <text x="186" y="258" text-anchor="end" font-weight="600">Jelapang</text>
+                <text x="186" y="275" text-anchor="end" font-size="12" class="mut">~360 m</text>
+              </g>
+              <path d="M200 277 L206 364" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <circle cx="206" cy="375" r="22" fill="var(--accent)" opacity=".16"/>
+              <circle cx="206" cy="375" r="9" fill="var(--accent)"/>
+              <text x="232" y="373" font-size="14" font-weight="600" style="fill:var(--accent)">Solano Grand</text>
+              <text x="232" y="391" font-size="12" class="mut">Senja Close</text>
+              <g fill="var(--muted)">
+                <rect x="118" y="301" width="10" height="10"/><rect x="133" y="357" width="10" height="10"/>
+                <rect x="77" y="395" width="10" height="10"/><rect x="383" y="326" width="10" height="10"/>
+              </g>
+              <g font-size="12" class="mut">
+                <text x="110" y="311" text-anchor="end" class="mut">Greenridge SC</text>
+                <text x="125" y="367" text-anchor="end" class="mut">Senja Hawker</text>
+                <text x="95" y="405" class="mut">Junction 10</text>
+                <text x="375" y="336" text-anchor="end" class="mut">Hillion Mall</text>
+              </g>
+              <text x="510" y="384" font-size="12.5" font-weight="600">Downtown Line</text>
+              <text x="510" y="401" font-size="12" class="mut">Botanic Gdns ~16 min · CBD ~35 min</text>
+            </svg>
+          </div>
+          <ul class="list facts">
+            <li><b>Jelapang LRT, ~360 m</b><span>Senja LRT is also a short walk</span></li>
+            <li><b>Bukit Panjang MRT, 2 stops</b><span>Downtown Line and Hillion Mall</span></li>
+            <li><b>Botanic Gardens ~16 min, CBD ~35 min</b><span>direct on the Downtown Line</span></li>
+            <li><b>KJE and BKE</b><span>via the Senja flyover</span></li>
+            <li><b>Green belt</b><span>Zhenghua Park, Pang Sua Pond, the Rail Corridor and Dairy Farm</span></li>
+          </ul>
+        </div>
+        <p class="src">Schematic map, not to scale. Distances and travel times are approximate.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="neighbourhood">
+      <p class="label">Neighbourhood</p>
+      <div class="body">
+        <h2>Three primary schools within 1 km</h2>
+        <div class="two">
+          <div><h3>Schools</h3>
+            <ul class="list">
+              <li><span>West Spring Primary</span><span>~430 m</span></li>
+              <li><span>West View Primary</span><span>~680 m</span></li>
+              <li><span>Greenridge Primary</span><span>~730 m</span></li>
+              <li><span>Zhenghua Primary</span><span>~1.3 km</span></li>
+              <li><span>CHIJ Our Lady Queen of Peace</span><span>nearby*</span></li>
+            </ul>
+          </div>
+          <div><h3>Everyday amenities</h3>
+            <ul class="list">
+              <li><span>Senja Hawker Centre</span><span>~260 m</span></li>
+              <li><span>Greenridge Shopping Centre</span><span>~600 m</span></li>
+              <li><span>Junction 10</span><span>~1.0 km</span></li>
+              <li><span>Hillion Mall · Bukit Panjang Plaza</span><span>~1.2 km</span></li>
+              <li><span>Childcare centre</span><span>on site</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="src">Approximate distances. *Check exact rings on SLA OneMap; admission rules set by MOE.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="demand">
+      <p class="label">Demand</p>
+      <div class="body">
+        <h2>A mature town that has waited a long time</h2>
+        <div class="figs">
+          <div class="fig"><div class="n">15 yrs</div><p>since the last EC land sale in Bukit Panjang (Blossom Residences, 2010 land)</p></div>
+          <div class="fig"><div class="n">~9,000</div><p>Bukit Panjang and Choa Chu Kang flats past MOP, 2019–21</p></div>
+          <div class="fig"><div class="n">1 of 5</div><p>old-rules ECs still to launch, the only one in the West</p></div>
+        </div>
+        <p class="statement">Only about 300 homes for all of them.</p>
+        <p class="src">Sources: HDB, URA, ERA, Huttons. The next West ECs come with a 10-year MOP.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="prices">
+      <p class="label">Price benchmarks</p>
+      <div class="body">
+        <h2>What recent ECs sold for</h2>
+        <div class="tscroll">
+          <table style="min-width:600px">
+            <thead><tr><th>Project</th><th>Period</th><th class="r">Average psf</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td>Coastal Cabana EC, Pasir Ris</td><td class="m">Jan 2026</td><td class="r">~S$1,734</td><td class="m">67% sold on launch weekend</td></tr>
+              <tr><td>Rivelle Tampines EC</td><td class="m">Mar 2026</td><td class="r">~S$1,893</td><td class="m">92.5% sold on launch weekend</td></tr>
+              <tr><td>All new ECs, 2025</td><td class="m">median</td><td class="r">S$1,754</td><td class="m">about 1,630 units sold in the year</td></tr>
+              <tr><td>Blossom Residences (resale)</td><td class="m">last 12 months</td><td class="r">~S$1,278</td><td class="m">the older EC nearby, 830 m away</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="statement">Analysts' early estimate for Solano Grand: <span class="accent">S$1,800+ psf</span>, possibly S$1,900–2,000.</p>
+        <p class="src">Sources: EdgeProp, ERA, URA. Averages are launch-period figures; Blossom Residences is resale. Official pricing comes at launch.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="rivelle">
+      <p class="label">Rivelle vs Solano</p>
+      <div class="body">
+        <h2>Same land cost as Rivelle, which sold out fast</h2>
+        <div class="figs" style="grid-template-columns:repeat(2,minmax(0,max-content));gap:24px 64px">
+          <div class="fig"><div class="n">S$768</div><p>Rivelle Tampines land bid, Oct 2024</p></div>
+          <div class="fig"><div class="n accent">S$771</div><p>Solano Grand land bid, Aug 2025</p></div>
+        </div>
+        <div class="tscroll">
+          <table style="min-width:600px">
+            <thead><tr><th>Rivelle home type</th><th class="r">sq ft</th><th class="r">Units</th><th class="r">Price range</th><th class="r">Median</th></tr></thead>
+            <tbody>
+              <tr><td>3-Bed Premium</td><td class="r m">883</td><td class="r m">88</td><td class="r m">$1.588M – $1.692M</td><td class="r">$1.650M</td></tr>
+              <tr><td>3-Bed Premium + Study</td><td class="r m">926</td><td class="r m">153</td><td class="r m">$1.662M – $1.831M</td><td class="r">$1.754M</td></tr>
+              <tr><td>4-Bedroom</td><td class="r m">1,044</td><td class="r m">145</td><td class="r m">$1.893M – $2.080M</td><td class="r">$1.985M</td></tr>
+              <tr><td>4-Bed + Study / Flexi</td><td class="r m">1,109 – 1,184</td><td class="r m">105</td><td class="r m">$2.040M – $2.301M</td><td class="r">$2.183M</td></tr>
+              <tr><td>4-Bed Premium</td><td class="r m">1,184</td><td class="r m">41</td><td class="r m">$2.129M – $2.355M</td><td class="r">$2.228M</td></tr>
+              <tr><td>5-Bedroom</td><td class="r m">1,378</td><td class="r m">40</td><td class="r m">$2.559M – $2.729M</td><td class="r">$2.627M</td></tr>
+              <tr class="total"><td>All 572 homes</td><td class="r">883 – 1,378</td><td class="r">572</td><td class="r">92.5% sold</td><td class="r">avg $1,893 psf</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="lead"><b>What it implies:</b> on Rivelle's land-to-price ratio, Solano Grand would land near S$1,900 psf. A working range is S$1,750–1,950 psf.</p>
+        <p class="src">Sources: EdgeProp; Rivelle price list, 16 Mar 2026 (normal scheme). Solano Grand figures are estimates.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="estimate">
+      <p class="label">Price estimator</p>
+      <div class="body">
+        <h2>What each sample layout could cost</h2>
+        <div class="slider">
+          <div class="slider-top"><label for="psf">Drag to try a price per sq ft</label><span class="psf num" id="psfOut">S$1,850 psf</span></div>
+          <input type="range" id="psf" min="1700" max="2050" step="10" value="1850" aria-describedby="psfOut">
+          <div class="presets" role="group" aria-label="Preset prices">
+            <button class="preset" type="button" data-v="1750" aria-pressed="false">Low S$1,750</button>
+            <button class="preset" type="button" data-v="1850" aria-pressed="true">Working estimate S$1,850</button>
+            <button class="preset" type="button" data-v="1893" aria-pressed="false">Rivelle avg S$1,893</button>
+            <button class="preset" type="button" data-v="1950" aria-pressed="false">High S$1,950</button>
+          </div>
+        </div>
+        <div>
+          <div class="key"><span><i class="k-rg"></i>Range at S$1,750–1,950 psf</span><span><i class="k-dot"></i>Selected psf</span><span><i class="k-rv"></i>At Rivelle's S$1,893 average</span></div>
+          <div class="rows" id="rows" style="margin-top:18px"></div>
+          <div class="axis" id="axis"></div>
+        </div>
+        <p class="src">Sizes are from the sample floor plans. Illustrative estimates only. Actual prices are set by the developer and vary by stack, floor and facing.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="eligibility">
+      <p class="label">Can you buy?</p>
+      <div class="body">
+        <h2>Eligibility, financing and the DPS</h2>
+        <div class="cols">
+          <div><h3>Who can buy</h3><p>Singapore Citizen families, or two or more singles aged 35+ under the Joint Singles Scheme.</p><p class="k">Household income up to S$16,000 a month.</p></div>
+          <div><h3>How much you can borrow</h3><p>The 30% Mortgage Servicing Ratio applies, as well as TDSR.</p><p class="k">At the income ceiling, a bank loan tops out around S$1.01M.</p></div>
+          <div><h3>Deferred Payment Scheme</h3><p>If offered: pay a 20% downpayment, the other 80% only at TOP.</p><p class="k">Upgraders can stay in their HDB flat while the EC is built.</p></div>
+        </div>
+        <p class="lead">First-timers may also qualify for CPF Housing Grants. I check your exact position with your HDB Flat Eligibility letter.</p>
+        <p class="src">Sources: HDB, ERA. DPS carries a higher price than the normal scheme; confirm terms at launch.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="layouts">
+      <p class="label">Sample layouts</p>
+      <div class="body">
+        <h2>Which home suits you?</h2>
+        <p class="lead" style="margin-top:-12px">Solano Grand's floor plans are not out yet. These four are samples from an earlier CDL EC, to show the kind of layouts to expect.</p>
+        <div class="tabs" role="tablist" aria-label="Sample layouts" id="tabs"></div>
+        <div class="plan" id="plan" role="tabpanel">
+          <figure><img id="planImg" src="" alt=""></figure>
+          <div class="meta">
+            <p class="suits" id="planSuits"></p>
+            <h3 id="planName"></h3>
+            <p class="sz num" id="planSize"></p>
+            <ul id="planList"></ul>
+            <p class="px num" id="planPx"></p>
+          </div>
+        </div>
+        <p class="lead">Tell me your budget and must-haves, and I will shortlist the best stacks for you once plans are released.</p>
+        <p class="src">Sample plans from an earlier CDL EC, not Solano Grand plans. Actual layouts and sizes will differ. Budgets are estimates at S$1,750–1,950 psf.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="timeline">
+      <p class="label">The road ahead</p>
+      <div class="body">
+        <h2>From launch to fully private</h2>
+        <div class="tl">
+          <div class="past"><span class="when">Aug 2025</span><b>Land awarded</b><span>Before the 8 May 2026 rule change</span></div>
+          <div class="now"><span class="when">Dec 2026 – Jan 2027</span><b>Preview and launch</b><span>Expected; plans and prices then</span></div>
+          <div><span class="when">~2030</span><b>Keys (TOP)</b><span>Remaining 80% due if on DPS</span></div>
+          <div><span class="when">~2035</span><b>MOP ends</b><span>Sell to Singaporeans and PRs</span></div>
+          <div><span class="when">~2040</span><b>Fully privatised</b><span>Open to all buyers, incl. foreigners</span></div>
+        </div>
+        <p class="lead">Under the new rules, the same purchase would wait until about 2040 to sell and 2045 to go fully private.</p>
+        <p class="src">Launch window per market reports (Oct 2026); TOP and later dates are estimates.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="steps">
+      <p class="label">Next steps</p>
+      <div class="body">
+        <h2>Be ready before the preview opens</h2>
+        <div class="steps">
+          <div><span class="i">1</span><h3>Register interest</h3><p>Share your budget and must-haves. I send you plans and prices the day they are out.</p></div>
+          <div><span class="i">2</span><h3>Get your HFE letter</h3><p>Confirms EC eligibility and grants. Apply early on the HDB portal.</p></div>
+          <div><span class="i">3</span><h3>Financial plan</h3><p>I work out your loan limit, CPF use, DPS option and cash outlay.</p></div>
+          <div><span class="i">4</span><h3>Preview and book</h3><p>View the showflat with me, submit your e-application and book on selection day.</p></div>
+        </div>
+        <p class="statement">With only about 300 homes, buyers who are ready on day one get the best stacks.</p>
+      </div>
+    </section>
+
+    <section class="sec" id="contact">
+      <p class="label">Your agent</p>
+      <div class="body">
+        <div class="contact">
+          <div class="agent"><img src="images/agent.webp" alt="Andy Ea"></div>
+          <div class="who">
+            <h2>Andy Ea</h2>
+            <p class="lead">Register your interest for the Solano Grand preview and get your personal stack shortlist.</p>
+            <ul class="list">
+              <li><span>WhatsApp</span><span><a href="https://wa.me/6597317111" target="_blank" rel="noopener">9731 7111</a><button class="copy" type="button" data-copy="+65 9731 7111">Copy</button></span></li>
+              <li><span>Instagram</span><span><a href="https://www.instagram.com/andy.ea.realtor/" target="_blank" rel="noopener">@andy.ea.realtor</a></span></li>
+              <li><span>TikTok</span><span><a href="https://www.tiktok.com/@andy.ea.realtor" target="_blank" rel="noopener">@andy.ea.realtor</a></span></li>
+              <li><span>YouTube</span><span><a href="https://www.youtube.com/@andy.ea.realtor" target="_blank" rel="noopener">@andy.ea.realtor</a></span></li>
+            </ul>
+          </div>
+          <form id="reg" novalidate>
+            <h3>Register interest</h3>
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" autocomplete="name" placeholder="e.g. Rachel Tan"></div>
+            <div class="field"><label for="f-type">Home type</label>
+              <select id="f-type"><option>Not sure yet</option><option>3-Bedroom</option><option>3-Bed Premium</option><option>4-Bedroom</option><option>5-Bedroom</option></select></div>
+            <div class="field"><label for="f-budget">Budget</label>
+              <select id="f-budget"><option>Not sure yet</option><option>Up to $1.7M</option><option>$1.7M – $1.9M</option><option>$1.9M – $2.2M</option><option>$2.2M – $2.6M</option><option>Above $2.6M</option></select></div>
+            <div class="field"><label for="f-buyer">I am a</label>
+              <select id="f-buyer"><option>First-timer</option><option>HDB upgrader</option><option>Second-timer</option></select></div>
+            <a class="cta" id="waSend" href="https://wa.me/6597317111" target="_blank" rel="noopener" style="justify-content:center">Send on WhatsApp</a>
+            <p class="hint">Opens WhatsApp with your details filled in, ready to send. Nothing is stored on this page. If it doesn't open, message 9731 7111 directly.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="page">
+  <div class="wrap">
+    <span>All information is for reference only and subject to change. CDL has not released official plans or prices; figures shown are estimates.</span>
+    <span>Presented by Andy Ea · 9731 7111</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var land=[["Sembawang Road","Sep 2025",692,"S$692",""],["Aurelle","Tampines",721,"S$721",""],["Miltonia Close","Yishun",732,"~S$732",""],["Rivelle","Tampines, sold S$1,893 psf",768,"S$768","rv"],["Solano Grand","Aug 2025",771,"S$771","sg"],["Wynwood Grand","Woodlands",782,"~S$782",""],["Woodlands Ave 12","Woodlands",794,"~S$794",""],["Canberra Drive","new rules",825,"S$825","nr"]];
+  document.getElementById('bars').innerHTML=land.map(function(d){return '<div class="bar '+d[4]+'" role="listitem"><div class="nm">'+d[0]+'<span>'+d[1]+'</span></div><div class="t"><i style="width:'+(d[2]/900*100).toFixed(2)+'%"></i></div><div class="v">'+d[3]+'</div></div>';}).join('');
+
+  var units=[["3-Bedroom","A1",936],["3-Bed Premium","A4P",969],["4-Bedroom","B2",1152],["5-Bedroom","C2",1496]];
+  var LO=1.5e6, HI=3.1e6, pos=function(v){return ((v-LO)/(HI-LO)*100).toFixed(2)+'%';};
+  var m=function(v){return '$'+(v/1e6).toFixed(2)+'M';};
+  document.getElementById('rows').innerHTML=units.map(function(u,i){
+    var lo=u[2]*1750, hi=u[2]*1950, rv=u[2]*1893;
+    return '<div class="row"><div class="nm">'+u[0]+'<span>'+u[1]+' · '+u[2].toLocaleString('en-US')+' sq ft</span></div>'+
+      '<div class="trk"><div class="rg" style="left:'+pos(lo)+';width:calc('+pos(hi)+' - '+pos(lo)+')"></div><div class="rv" style="left:'+pos(rv)+'"></div><div class="dot" id="dot'+i+'"></div></div>'+
+      '<div class="val"><b id="val'+i+'"></b><span>'+m(lo)+' – '+m(hi)+'</span></div></div>';
+  }).join('');
+  document.getElementById('axis').innerHTML='<div></div><div>'+[1.5e6,1.9e6,2.3e6,2.7e6,3.1e6].map(function(g,i,a){var t=i===0?'translateX(0)':i===a.length-1?'translateX(-100%)':'translateX(-50%)';return '<span style="left:'+pos(g)+';transform:'+t+'">$'+(g/1e6).toFixed(1)+'M</span>';}).join('')+'</div><div></div>';
+
+  var psf=document.getElementById('psf'), out=document.getElementById('psfOut'), presets=[].slice.call(document.querySelectorAll('.preset'));
+  var plans=[
+    {k:"a1",t:"3-Bedroom",s:"First-timer couples",n:"3-Bedroom, Type A1",z:"87 sqm · 936 sq ft",f:936,img:"images/plan-a1.jpg",l:["Three bedrooms in a row, master with its own bath","Open kitchen beside the dining area","Balcony off the living room"]},
+    {k:"a4p",t:"3-Bed Premium",s:"HDB upgraders, on DPS",n:"3-Bedroom Premium, Type A4P",z:"90 sqm · 969 sq ft",f:969,img:"images/plan-a4p.jpg",l:["Adds a yard and household shelter by the kitchen","Long balcony across the living room","Some stacks have a 4.8 m high ceiling"]},
+    {k:"b2",t:"4-Bedroom",s:"Growing families, near schools",n:"4-Bedroom, Type B2",z:"107 sqm · 1,152 sq ft",f:1152,img:"images/plan-b2.jpg",l:["Four bedrooms, two bathrooms plus a WC","Yard and utility area behind the kitchen","Living and dining open onto the balcony"]},
+    {k:"c2",t:"5-Bedroom",s:"Multi-generation families",n:"5-Bedroom, Type C2",z:"139 sqm · 1,496 sq ft",f:1496,img:"images/plan-c2.jpg",l:["Junior master suite for parents or grown-up kids","Dry and wet kitchens","Large living and dining for a big family"]}
+  ];
+  var cur=0, tabs=document.getElementById('tabs');
+  function planPx(){var p=plans[cur], v=+psf.value; document.getElementById('planPx').innerHTML='Estimated <b>'+m(p.f*1750)+' – '+m(p.f*1950)+'</b>. At S$'+v.toLocaleString('en-US')+' psf, about <b>'+m(p.f*v)+'</b>.';}
+  function upd(v){
+    v=+v; out.textContent='S$'+v.toLocaleString('en-US')+' psf';
+    units.forEach(function(u,i){var p=u[2]*v; document.getElementById('dot'+i).style.left=pos(Math.max(LO,Math.min(HI,p))); document.getElementById('val'+i).textContent=m(p);});
+    presets.forEach(function(c){c.setAttribute('aria-pressed',String(+c.dataset.v===v));});
+    planPx();
+  }
+  psf.addEventListener('input',function(){upd(psf.value);});
+  presets.forEach(function(c){c.addEventListener('click',function(){psf.value=c.dataset.v; upd(c.dataset.v);});});
+
+  tabs.innerHTML=plans.map(function(p,i){return '<button class="tab" role="tab" type="button" id="tab-'+p.k+'" aria-controls="plan" aria-selected="'+(i===0)+'" data-i="'+i+'">'+p.t+'</button>';}).join('');
+  function show(i){
+    cur=i; var p=plans[i], img=document.getElementById('planImg');
+    img.src=p.img; img.alt='Sample floor plan, '+p.n+', from an earlier CDL EC';
+    document.getElementById('planSuits').textContent='Suits '+p.s.charAt(0).toLowerCase()+p.s.slice(1);
+    document.getElementById('planName').textContent=p.n;
+    document.getElementById('planSize').textContent=p.z;
+    document.getElementById('planList').innerHTML=p.l.map(function(x){return '<li>'+x+'</li>';}).join('');
+    [].forEach.call(tabs.children,function(b,j){b.setAttribute('aria-selected',String(j===i)); b.tabIndex=j===i?0:-1;});
+    document.getElementById('plan').setAttribute('aria-labelledby','tab-'+p.k);
+    planPx();
+  }
+  tabs.addEventListener('click',function(e){var b=e.target.closest('.tab'); if(b) show(+b.dataset.i);});
+  tabs.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=(cur+(e.key==='ArrowRight'?1:plans.length-1))%plans.length; show(n); tabs.children[n].focus();}});
+  show(0); upd(1850);
+
+  var wa=document.getElementById('waSend'), val=function(id){return document.getElementById(id).value.trim();};
+  function waUpd(){
+    var msg='Hi Andy, I would like to register interest for Solano Grand.'+(val('f-name')?'\nName: '+val('f-name'):'')+'\nHome type: '+val('f-type')+'\nBudget: '+val('f-budget')+'\nI am a: '+val('f-buyer');
+    wa.href='https://wa.me/6597317111?text='+encodeURIComponent(msg);
+  }
+  var reg=document.getElementById('reg');
+  reg.addEventListener('input',waUpd); reg.addEventListener('change',waUpd);
+  reg.addEventListener('submit',function(e){e.preventDefault();});
+  waUpd();
+
+  [].forEach.call(document.querySelectorAll('.copy'),function(b){
+    b.addEventListener('click',function(){
+      var t=b.dataset.copy, done=function(){b.textContent='Copied'; setTimeout(function(){b.textContent='Copy';},1600);};
+      try{navigator.clipboard.writeText(t).then(done,function(){b.textContent=t;});}catch(e){b.textContent=t;}
+    });
+  });
+})();
+</script>
+</body>
+</html>
